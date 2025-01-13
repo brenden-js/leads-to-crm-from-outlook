@@ -26,3 +26,9 @@ binding = "AI"
 
 [observability.logs]
 enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "leadstocrmdb"
+database_id = "7eb7435f-a650-4f1e-ae03-9c3ec44f4c68"
+

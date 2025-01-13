@@ -238,25 +238,8 @@ export class OutlookEmailWorkflow extends WorkflowEntrypoint<Env, EmailWorkflowP
 			}))
 		);
 
-		// Step 4: Store leads in database (commented out for now)
-		/*
-		const leadsToStore = processedEmails
-			.filter(email => email.leadInfo.isLead)
-			.map(email => ({
-				email_id: email.id,
-				received_date: new Date(email.receivedDateTime),
-				lead_name: email.leadInfo.leadName,
-				lead_email: email.leadInfo.leadEmail,
-				lead_phone: email.leadInfo.leadPhone,
-				wedding_venue: email.leadInfo.weddingVenue,
-				inquiry_details: email.leadInfo.inquiryDetails
-			}));
-
-		await step.do('store-leads', async () => {
-			// TODO: Implement Drizzle database insertion
-			// await db.insert(leads).values(leadsToStore);
-		});
-		*/
+		// TODO: Add your preferred CRM integration here
+		console.log('Found leads:', processedEmails.filter(email => email.leadInfo.isLead));
 
 		return {
 			messages: processedEmails,

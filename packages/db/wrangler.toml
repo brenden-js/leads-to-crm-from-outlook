@@ -1,0 +1,9 @@
+name = "lorebook-db-wrangler"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "thelorebook-db-prod"
+database_id = "de56fefb-9a00-413c-ad92-a29be4f5ea33"
+migrations_dir = "migrations"
