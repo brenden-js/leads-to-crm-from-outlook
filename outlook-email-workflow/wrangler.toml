@@ -19,3 +19,10 @@ DEFAULT_EMAIL = "leadstocrm@outlook.com"
 [[kv_namespaces]]
 binding = "OUTLOOK_TOKENS"
 id = "5e449f9178ba4ffcaa945fb71bb39cbe"
+
+# Add AI binding
+[ai]
+binding = "AI"
+
+[observability.logs]
+enabled = true
