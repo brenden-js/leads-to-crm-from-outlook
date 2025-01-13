@@ -1,0 +1,21 @@
+name = "outlook-email-workflow"
+main = "src/index.ts"
+compatibility_date = "2024-03-20"
+
+# Add cron trigger to run every 15 minutes
+[triggers]
+crons = ["*/15 * * * *"]
+
+# Add workflow binding
+[[workflows]]
+name = "outlook-email-workflow"
+binding = "EMAIL_WORKFLOW" 
+class_name = "OutlookEmailWorkflow"
+
+# Add environment variables
+[vars]
+DEFAULT_EMAIL = "leadstocrm@outlook.com" 
+
+[[kv_namespaces]]
+binding = "OUTLOOK_TOKENS"
+id = "5e449f9178ba4ffcaa945fb71bb39cbe"
